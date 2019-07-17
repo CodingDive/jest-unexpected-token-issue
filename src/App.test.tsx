@@ -3,6 +3,7 @@ import { render } from "@testing-library/react";
 import { StyledComp } from "./StyledComponent";
 import { StyledCompMacro } from "./StyledComponentMacro";
 import { StyledCompCss } from "./StyledComponentCssProp";
+import { ComponentWithDependency } from "./ComponentConsumingPackage";
 
 it("renders normal button", () => {
   render(<button>Test</button>);
@@ -22,4 +23,8 @@ it("renders styled component macro", () => {
 
 it("renders component with styled component css prop", () => {
   render(<StyledCompCss>Test</StyledCompCss>);
+});
+
+it("renders component with dependency", () => {
+  render(<ComponentWithDependency />);
 });
